@@ -1,0 +1,10 @@
+streamlit
+scikit-learn
+pandas
+nltk
+joblib
+transformers
+datasets
+torch
+requests
+beautifulsoup4
