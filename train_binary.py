@@ -8,13 +8,13 @@ from utils import preprocess_text
 
 # Load dataset (Webis Clickbait 2017 preprocessed CSV)
 # Expected columns: "headline", "label" (0=neutral, 1=clickbait)
-data = pd.read_csv("data/clickbait.csv")
+data = pd.read_csv("data/clickbait_data.csv")
 
 # Preprocess
 data["headline"] = data["headline"].astype(str).apply(preprocess_text)
 
 X = data["headline"]
-y = data["label"]
+y = data["clickbait"]
 
 # TF-IDF
 vectorizer = TfidfVectorizer(max_features=5000)
